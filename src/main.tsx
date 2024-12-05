@@ -3,14 +3,21 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  console.error('Root element not found');
-  throw new Error('Failed to find the root element');
-}
+const prepare = async () => {
+  const rootElement = document.getElementById('root');
+  if (!rootElement) {
+    throw new Error('Failed to find the root element');
+  }
 
-createRoot(rootElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  const root = createRoot(rootElement);
+  
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+};
+
+prepare().catch((error) => {
+  console.error('Application failed to start:', error);
+});
