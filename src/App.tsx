@@ -7,7 +7,7 @@ import { MusicAlbums } from './pages/MusicAlbums';
 
 export default function App() {
   return (
-    <HashRouter>
+    <HashRouter basename="/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
