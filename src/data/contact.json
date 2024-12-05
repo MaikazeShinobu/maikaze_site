@@ -1,0 +1,9 @@
+{
+  "contact": {
+    "name": "何でもご意見箱",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSd2aJTV3FKb97NIoYgJngjvM-AqbD4YrPv_auCM_G_KyhDKAQ/viewform?usp=sf_link",
+    "icon": "Mail",
+    "color": "hover:bg-purple-500",
+    "description": "匿名で舞風に感想,ご意見.ご連絡!"
+  }
+}

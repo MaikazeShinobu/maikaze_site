@@ -1,0 +1,16 @@
+{
+  "albums": [
+    {
+      "id": "digital-dreams",
+      "title": "オトワレノセカイ",
+      "releaseDate": "2024",
+      "coverImage": "/albums/オトワレノセカイ.PNG",
+      "albumUrl": "https://linkco.re/REa41aTs",
+      "platforms": {
+        "appleMusic": "https://music.apple.com/jp/album/vocalnoisemusic-ep/1702842493",
+        "spotify": "https://open.spotify.com/intl-ja/album/1aY2dQWkzH8flL9ltYklBV",
+        "それ以外のサブスク": "https://linkco.re/REa41aTs"
+      }
+    }
+  ]
+}

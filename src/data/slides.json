@@ -1,0 +1,25 @@
+{
+  "slides": [
+    {
+      "type": "youtube",
+      "title": "準備中",
+      "description": "テキスト",
+      "thumbnail": "/slides/1.PNG",
+      "url": "https://zenn.dev/tsuruo/scraps/b76f5914f53a4b"
+    },
+    {
+      "type": "note",
+      "title": "準備中",
+      "description": "テキスト",
+      "thumbnail": "/slides/3.PNG",
+      "url": "#"
+    },
+    {
+      "type": "youtube",
+      "title": "準備中",
+      "description": "テキスト",
+      "thumbnail": "/slides/2.PNG",
+      "url": "#"
+    }
+  ]
+}

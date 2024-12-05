@@ -1,0 +1,36 @@
+{
+  "projects": [
+    {
+      "id": "video-production-1",
+      "title": "映像制作",
+      "description": "短編映画やミュージックビデオの制作",
+      "imageUrl": "/projects/2473704709234.jpg",
+      "link": "https://example.com/video-production",
+      "categoryId": 0
+    },
+    {
+      "id": "music-videos",
+      "title": "ミュージックビデオ",
+      "description": "アーティストとのコラボレーション作品",
+      "imageUrl": "/No images.PNG",
+      "link": "https://example.com/music-videos",
+      "categoryId": 1
+    },
+    {
+      "id": "game-development",
+      "title": "ゲーム開発",
+      "description": "インディーゲームの開発プロジェクト",
+      "imageUrl": "/No images.PNG",
+      "link": "https://example.com/game-dev",
+      "categoryId": 2
+    },
+    {
+      "id": "art-project",
+      "title": "アートプロジェクト",
+      "description": "デジタルアートの展示企画",
+      "imageUrl": "/No images.PNG",
+      "link": "https://example.com/art-project",
+      "categoryId": 3
+    }
+  ]
+}

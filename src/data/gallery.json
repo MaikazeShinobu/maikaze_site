@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "title": "2473704709234",
+      "description": "作品1の説明",
+      "imageUrl": "/Galallery/2473704709234.jpg",
+      "category": "photo",
+      "date": "2024-03-01"
+    },
+    {
+      "id": "2",
+      "title": "20240731110005",
+      "description": "作品2の説明",
+      "imageUrl": "/Galallery/20240731110005.jpg",
+      "category": "photo",
+      "date": "2024-03-05"
+    }
+  ]
+}
