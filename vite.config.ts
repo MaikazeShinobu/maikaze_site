@@ -4,7 +4,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/maikaze_site/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
