@@ -1,5 +1,3 @@
-const BASE_PATH = '/maikaze_site';
-
 export function getImagePath(path: string): string {
   if (!path) return '';
   
@@ -12,9 +10,9 @@ export function getImagePath(path: string): string {
   }
   
   // In production (GitHub Pages)
-  return `${BASE_PATH}/${normalizedPath}`;
+  return `/${normalizedPath}`;
 }
 
 export function getPublicPath(): string {
-  return import.meta.env.DEV ? '' : BASE_PATH;
+  return '';
 }
