@@ -14,3 +14,7 @@ export function getImagePath(path: string): string {
   // In production (GitHub Pages)
   return `${BASE_PATH}/${normalizedPath}`;
 }
+
+export function getPublicPath(): string {
+  return import.meta.env.DEV ? '' : BASE_PATH;
+}
