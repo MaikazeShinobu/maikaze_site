@@ -22,8 +22,7 @@ export function SocialLink({ name, url, icon: Icon, color, description }: Social
     <LinkComponent
       {...linkProps}
       className={`group block p-3 rounded-lg bg-black/40 backdrop-blur-sm 
-        ${color} transition-all duration-300 hover:translate-x-1
-        border border-white/10 hover:border-white/20`}
+        ${color} transition-all duration-300 hover:translate-x-1`}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">

@@ -17,11 +17,12 @@ export function Home() {
   return (
     <div className="min-h-screen bg-black relative">
       <div 
-        className="absolute inset-0 bg-black/90 bg-no-repeat bg-fixed"
+        className="fixed inset-0 bg-black/90 bg-no-repeat"
         style={{ 
           backgroundImage: `url(${getImagePath('images/Background.png')})`,
           backgroundPosition: '60% -10%',
-          backgroundSize: '200% auto'
+          backgroundSize: '200% auto',
+          zIndex: 0
         }}
       />
       
