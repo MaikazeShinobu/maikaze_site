@@ -1,7 +1,8 @@
+import { getAssetPath } from './assetUtils';
+
 export function getProjectImageUrl(imagePath: string): string {
   try {
-    const normalizedPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath;
-    return `/${normalizedPath}`;
+    return getAssetPath(imagePath);
   } catch (error) {
     console.error(`Error loading project image: ${imagePath}`, error);
     return 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&h=500';
