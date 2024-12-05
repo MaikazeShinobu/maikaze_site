@@ -19,7 +19,7 @@ export function Home() {
       <div 
         className="absolute inset-0 bg-black/90 bg-no-repeat bg-fixed"
         style={{ 
-          backgroundImage: `url(${getImagePath('images/Background.PNG')})`,
+          backgroundImage: `url(${getImagePath('images/Background.png')})`,
           backgroundPosition: '60% -10%',
           backgroundSize: '200% auto'
         }}
