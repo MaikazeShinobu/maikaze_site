@@ -10,9 +10,9 @@ export function getImagePath(path: string): string {
   }
   
   // In production (GitHub Pages)
-  return `/${normalizedPath}`;
+  return `/maikaze_site/${normalizedPath}`;
 }
 
 export function getPublicPath(): string {
-  return '';
+  return import.meta.env.DEV ? '' : '/maikaze_site';
 }
