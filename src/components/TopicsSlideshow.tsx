@@ -15,52 +15,64 @@ const topics: Topic[] = slidesData.slides;
 
 export function TopicsSlideshow() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % topics.length);
-    }, 5000);
+    if (!isPaused) {
+      const timer = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % topics.length);
+      }, 5000);
 
-    return () => clearInterval(timer);
-  }, []);
+      return () => clearInterval(timer);
+    }
+  }, [isPaused]);
 
   const nextSlide = (e: React.MouseEvent) => {
     e.preventDefault();
+    e.stopPropagation();
     setCurrentIndex((prev) => (prev + 1) % topics.length);
   };
 
   const prevSlide = (e: React.MouseEvent) => {
     e.preventDefault();
+    e.stopPropagation();
     setCurrentIndex((prev) => (prev - 1 + topics.length) % topics.length);
   };
 
   const currentTopic = topics[currentIndex];
 
   return (
-    <div className="relative group">
+    <div 
+      className="relative group"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
         <a
           href={currentTopic.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute inset-0"
+          className="absolute inset-0 block"
         >
-          <img
-            src={getImagePath(currentTopic.thumbnail)}
-            alt={currentTopic.title}
-            className="w-full h-full object-cover rounded-lg opacity-90 transition-transform duration-300 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-lg">
-            <div className="absolute bottom-0 left-0 right-0 p-4">
-              <div className="inline-block px-2 py-0.5 rounded-full text-sm mb-1 font-medium"
-                style={{
-                  backgroundColor: currentTopic.type === 'youtube' ? 'rgb(255, 0, 0)' : 'rgb(41, 195, 41)'
-                }}
-              >
-                {currentTopic.type === 'youtube' ? 'YouTube' : 'Note'}
+          <div className="relative h-full w-full overflow-hidden rounded-lg">
+            <img
+              src={getImagePath(currentTopic.thumbnail)}
+              alt={currentTopic.title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+              <div className="absolute bottom-0 left-0 right-0 p-4 transform transition-all duration-300">
+                <div 
+                  className="inline-block px-2 py-0.5 rounded-full text-sm mb-1 font-medium"
+                  style={{
+                    backgroundColor: currentTopic.type === 'youtube' ? 'rgb(255, 0, 0)' : 'rgb(41, 195, 41)'
+                  }}
+                >
+                  {currentTopic.type === 'youtube' ? 'YouTube' : 'Note'}
+                </div>
+                <h3 className="text-lg font-bold text-white mb-1">{currentTopic.title}</h3>
+                <p className="text-sm text-gray-200">{currentTopic.description}</p>
               </div>
-              <h3 className="text-lg font-bold text-white mb-1">{currentTopic.title}</h3>
-              <p className="text-sm text-gray-200">{currentTopic.description}</p>
             </div>
           </div>
         </a>
@@ -85,10 +97,11 @@ export function TopicsSlideshow() {
             key={index}
             onClick={(e) => {
               e.preventDefault();
+              e.stopPropagation();
               setCurrentIndex(index);
             }}
             className={`w-1.5 h-1.5 rounded-full transition-all ${
-              index === currentIndex ? 'bg-white scale-125' : 'bg-white/50'
+              index === currentIndex ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
             }`}
           />
         ))}
