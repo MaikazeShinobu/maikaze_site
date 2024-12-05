@@ -6,7 +6,7 @@ import { Footer } from '../components/Footer';
 import { ProfileDescription } from '../components/ProfileDescription';
 import { socialLinks } from '../data/socialLinks';
 import profileContent from '../data/profileContent.json';
-import { getAssetPath } from '../utils/assetUtils';
+import { getImagePath } from '../utils/imageUtils';
 
 export function Home() {
   const soundCloudAndBefore = socialLinks.slice(0, 3);
@@ -19,7 +19,7 @@ export function Home() {
       <div 
         className="absolute inset-0 bg-black/90 bg-no-repeat bg-fixed"
         style={{ 
-          backgroundImage: `url(${getAssetPath('images/Background.png')})`,
+          backgroundImage: `url(${getImagePath('images/Background.PNG')})`,
           backgroundPosition: '60% -10%',
           backgroundSize: '200% auto'
         }}
