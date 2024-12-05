@@ -5,9 +5,16 @@ import { Gallery } from './pages/Gallery';
 import { Projects } from './pages/Projects';
 import { MusicAlbums } from './pages/MusicAlbums';
 
+const router = {
+  future: {
+    v7_startTransition: true,
+    v7_relativeSplatPath: true
+  }
+};
+
 export default function App() {
   return (
-    <HashRouter>
+    <HashRouter future={router.future}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
