@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import slidesData from '../data/slides.json';
+import { getAssetPath } from '../utils/assetUtils';
 
 interface Topic {
   type: 'youtube' | 'note';
@@ -45,7 +46,7 @@ export function TopicsSlideshow() {
           className="absolute inset-0"
         >
           <img
-            src={currentTopic.thumbnail}
+            src={getAssetPath(currentTopic.thumbnail)}
             alt={currentTopic.title}
             className="w-full h-full object-cover rounded-lg opacity-90 transition-transform duration-300 group-hover:scale-105"
           />
